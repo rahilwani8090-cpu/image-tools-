@@ -1,302 +1,725 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- 🟢 MASTER SEARCH CONSOLE VERIFIED 🟢 -->
-    <meta name="google-site-verification" content="x_CLn7r5xAAYuYc3bY1eP_mtYWlkfh0pZIpi9r5ReYk" />
-
-    <!-- ULTIMATE SEO & BRAND ARCHITECTURE -->
-    <title>Image Tools | The Private AI Image & PDF Productivity Suite</title>
-    <meta name="description" content="Official home of Image Tools V1.3. A flagship Android ecosystem for AI Background Removal, AES-256 Encrypted Vault, 4K Upscaling, OCR, and Enterprise PDF Management. Local-first, private, and secure.">
-    <meta name="keywords" content="image tools, secure vault, ai bg remover, pdf compressor, id card scanner to a4, ocr scanner, magic eraser, ai upscaler android, private productivity app">
-    <link rel="canonical" href="https://your-domain.com/" />
-    
-    <!-- OPEN GRAPH (Social Media Performance) -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Image Tools | High-Performance AI Utility">
-    <meta property="og:description" content="Secure, Private, and Powerful. The only toolkit you'll ever need for Image & PDF orchestration.">
-    <meta property="og:theme-color" content="#F05A28">
-
-    <!-- JSON-LD STRUCTURED DATA (Google Search Ranking Boost) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Image Tools",
-      "operatingSystem": "ANDROID",
-      "applicationCategory": "ProductivityApplication",
-      "aggregateRating": {
-        "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "1250"
-      },
-      "offers": {
-        "@type": "Offer", "price": "0.00", "priceCurrency": "USD"
-      }
-    }
-    </script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --primary: #F05A28; /* Ubuntu Orange */
-            --secondary: #772953; /* Ubuntu Auburn */
-            --bg: #0B0E14;
-            --surface: rgba(22, 25, 34, 0.7);
-            --border: rgba(255, 255, 255, 0.1);
-            --text-main: #FFFFFF;
-            --text-dim: #AEA79F;
-            --safe-blue: #00d2ff;
-            --gradient: linear-gradient(135deg, #F05A28 0%, #772953 100%);
-            --safe-gradient: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
-            --glass: blur(35px);
-        }
-
-        /* 🚀 Performance Optimization */
-        html { scroll-behavior: smooth; }
-        * { margin:0; padding:0; box-sizing:border-box; }
-        body { background: var(--bg); color: white; font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; line-height: 1.6; text-rendering: optimizeLegibility; }
-
-        /* 🎭 BRAND LEVEL ANIMATIONS: Floating Ambient Blobs */
-        .ambient { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; pointer-events: none; }
-        .blob { position: absolute; border-radius: 50%; filter: blur(100px); opacity: 0.12; animation: drift 25s infinite alternate; }
-        .blob-1 { width: 50vw; height: 50vw; background: var(--primary); top: -15%; right: -10%; }
-        .blob-2 { width: 40vw; height: 40vw; background: var(--safe-blue); bottom: -15%; left: -5%; animation-delay: -5s; }
-        @keyframes drift { from { transform: translate(0,0) scale(1.0); } to { transform: translate(80px, 80px) scale(1.1); } }
-
-        /* HEADER NAVIGATION */
-        header { 
-            padding: 25px 8%; display: flex; justify-content: space-between; align-items: center; 
-            backdrop-filter: var(--glass); position: fixed; top: 0; width: 100%; z-index: 1000; 
-            border-bottom: 1px solid var(--border); 
-        }
-        .logo { font-family: 'Outfit', sans-serif; font-size: clamp(20px, 4vw, 26px); font-weight: 800; letter-spacing: -1.5px; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .v-badge { font-size: 11px; font-weight: 800; background: rgba(240, 90, 40, 0.15); color: var(--primary); padding: 5px 15px; border-radius: 20px; border: 1px solid rgba(240, 90, 40, 0.3); }
-
-        /* HERO SEGMENT */
-        .hero { padding: 180px 8% 100px; text-align: center; }
-        .hero-tag { color: var(--primary); font-weight: 800; font-size: 14px; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 25px; animation: fadeInUp 0.8s ease; }
-        .hero h1 { font-family: 'Outfit', sans-serif; font-size: clamp(40px, 9vw, 95px); line-height: 1; margin-bottom: 30px; letter-spacing: -3px; font-weight: 800; }
-        .hero h1 span { color: var(--primary); }
-        .hero p { max-width: 850px; margin: 0 auto 50px; color: var(--text-dim); font-size: clamp(16px, 2.2vw, 21px); font-weight: 300; animation: fadeInUp 1.2s ease; }
-
-        /* ACTION SYSTEM */
-        .btn-stack { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; animation: fadeInUp 1.4s ease; }
-        .btn { padding: 22px 55px; border-radius: 18px; font-weight: 700; text-decoration: none; font-size: 17px; display: flex; align-items: center; gap: 12px; transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer; border: none; }
-        .btn-p { background: var(--gradient); color: white; box-shadow: 0 15px 35px rgba(240, 90, 40, 0.3); }
-        .btn-p:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 25px 50px rgba(240, 90, 40, 0.5); }
-        .btn-outline { background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: white; backdrop-filter: var(--glass); }
-        .btn-outline:hover { border-color: var(--primary); background: rgba(255,255,255,0.1); }
-
-        /* 🛡️ ENCRYPTED VAULT HIGH-VIS PERFORMANCE AREA */
-        .vault-core { 
-            padding: 100px 8%; background: rgba(0, 210, 255, 0.03); border: 1px solid rgba(0, 210, 255, 0.1); 
-            border-radius: 60px; margin: 60px 8%; display: flex; align-items: center; gap: 80px; position: relative; overflow: hidden;
-        }
-        .vault-vis { flex: 1; text-align: center; position: relative; }
-        .vault-shield { font-size: 130px; animation: pulseShield 4s infinite alternate; filter: drop-shadow(0 0 30px rgba(0, 210, 255, 0.5)); }
-        @keyframes pulseShield { from { transform: scale(1); opacity: 0.8; } to { transform: scale(1.15); opacity: 1; } }
-        
-        .vault-content { flex: 1.5; }
-        .vault-content h2 { font-family: 'Outfit', sans-serif; font-size: clamp(32px, 5vw, 45px); margin-bottom: 20px; color: var(--safe-blue); font-weight: 800; }
-        .safe-tag { display: inline-block; padding: 7px 20px; background: rgba(0, 210, 255, 0.1); border: 1px solid var(--safe-blue); border-radius: 50px; color: var(--safe-blue); font-size: 13px; font-weight: 800; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 2px; }
-        .vault-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; list-style: none; font-size: 15px; font-weight: 600; margin-top: 30px; }
-        .vault-list li::before { content: '✓ '; color: var(--safe-blue); font-weight: 900; }
-
-        /* 📺 INTERACTIVE TECHNOLOGY DEMOS */
-        .showcase { padding: 80px 8%; text-align: center; }
-        .demo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; margin-top: 60px; }
-        .demo-card { background: var(--surface); border-radius: 40px; border: 1px solid var(--border); overflow: hidden; backdrop-filter: var(--glass); transition: 0.4s; text-align: left; }
-        .demo-card:hover { border-color: var(--primary); transform: translateY(-15px); }
-        
-        .visual-area { height: 280px; background: #000; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-        
-        /* Scanning Animation */
-        .scan-frame { width: 220px; height: 140px; border: 2px solid rgba(255,255,255,0.2); border-radius: 12px; position: relative; }
-        .scan-line { position: absolute; width:100%; height:4px; background: var(--primary); box-shadow: 0 0 25px var(--primary); top:0; animation: scanMove 3.5s infinite ease-in-out; }
-        @keyframes scanMove { 0%, 100% { top: 0; } 50% { top: 100%; } }
-
-        /* Comparison Slider */
-        .split-visual { width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600') center/cover; position: relative; }
-        .split-slider { position:absolute; left:0; width:50%; height:100%; background: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=250') center/cover; filter: grayscale(1) blur(6px); border-right: 4px solid var(--primary); animation: sliderMove 4s infinite alternate; }
-        @keyframes sliderMove { from { width: 20%; } to { width: 90%; } }
-
-        .demo-txt { padding: 40px; }
-        .demo-txt h3 { font-family: 'Outfit'; font-size: 26px; color: var(--primary); margin-bottom: 15px; font-weight: 800; }
-        .demo-txt p { color: var(--text-dim); font-size: 15.5px; line-height: 1.7; }
-
-        /* 💎 MASTER FEATURE MATRIX: Complete Capability List */
-        .f-grid { padding: 100px 8%; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-        .f-item { background: var(--surface); padding: 50px 40px; border-radius: 40px; border: 1px solid var(--border); transition: 0.4s; position: relative; }
-        .f-item:hover { border-color: var(--primary); background: rgba(255,255,255,0.04); transform: translateY(-8px); }
-        .f-icon-main { font-size: 42px; margin-bottom: 30px; display: block; filter: drop-shadow(0 0 10px rgba(240, 90, 40, 0.3)); }
-        .f-item h4 { font-family: 'Outfit', sans-serif; font-size: 22px; margin-bottom: 15px; font-weight: 800; }
-        .f-item p { color: var(--text-dim); font-size: 14.5px; font-weight: 300; line-height: 1.6; }
-
-        /* 💡 WHY CHOOSE: Strategic Brand Positioning */
-        .philosophy { padding: 120px 8%; text-align: center; }
-        .pill-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 60px; text-align: left; }
-        .pill-card { background: rgba(255,255,255,0.02); padding: 50px; border-radius: 45px; border-left: 6px solid var(--primary); backdrop-filter: var(--glass); }
-        .pill-card h5 { font-family: 'Outfit'; font-size: 24px; margin-bottom: 15px; font-weight: 800; }
-        .pill-card p { color: var(--text-dim); font-size: 16px; }
-
-        /* 🧠 ARCHITECTURE MODAL: The Technical Narrative */
-        .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.98); backdrop-filter: var(--glass); display: none; z-index: 2000; overflow-y: auto; padding: 100px 8%; }
-        .m-content { max-width: 1100px; margin: 0 auto; animation: modalIn 0.7s cubic-bezier(0.19, 1, 0.22, 1); }
-        @keyframes modalIn { from { opacity:0; transform: translateY(80px); } to { opacity:1; transform: translateY(0); } }
-        .m-close { position: fixed; top: 40px; right: 50px; font-size: 55px; cursor: pointer; color: var(--primary); transition: 0.3s; }
-        .m-close:hover { transform: rotate(90deg); }
-
-        .tech-tag { display: inline-block; padding: 8px 22px; background: rgba(240, 90, 40, 0.1); border: 1.5px solid var(--primary); border-radius: 50px; font-size: 13px; color: var(--primary); font-weight: 800; margin: 0 15px 15px 0; }
-        .m-sec { margin-bottom: 80px; padding-bottom: 50px; border-bottom: 1px solid var(--border); }
-        .m-sec h2 { font-family: 'Outfit'; color: var(--primary); font-size: 40px; margin-bottom: 30px; font-weight: 800; }
-
-        /* FOOTER BRANDING */
-        footer { padding: 120px 8% 60px; text-align: center; border-top: 1px solid var(--border); }
-        .footer-logo { font-family: 'Outfit'; font-weight: 800; font-size: 15px; letter-spacing: 7px; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-transform: uppercase; margin-bottom: 25px; }
-
-        @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
-
-        @media (max-width: 992px) { 
-            .vault-core { flex-direction: column; text-align: center; border-radius: 40px; } 
-            .hero h1 { font-size: 55px; letter-spacing: -2px; } 
-            .m-close { top: 20px; right: 25px; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ImageToolsPro - Complete Android Project Documentation. A premium all-in-one document & image processing suite.">
+<title>ImageToolsPro — Complete Project Documentation</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0F111A;
+  --surface: #161922;
+  --card: #1C1F2E;
+  --border: #2A2D3E;
+  --orange: #F05A28;
+  --auburn: #772953;
+  --warm-grey: #AEA79F;
+  --text: #E8E8EC;
+  --text-dim: #8B8FA3;
+  --accent-glow: rgba(240,90,40,0.15);
+  --green: #4ADE80;
+  --blue: #60A5FA;
+  --purple: #A78BFA;
+  --pink: #F472B6;
+  --cyan: #22D3EE;
+  --yellow: #FACC15;
+  --radius: 16px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  min-height: 100vh;
+}
+a { color: var(--orange); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code, .mono {
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--card);
+  padding: 2px 7px;
+  border-radius: 6px;
+  font-size: 0.88em;
+  color: var(--cyan);
+}
+pre {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  overflow-x: auto;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85em;
+  line-height: 1.6;
+  color: var(--text-dim);
+  margin: 16px 0;
+}
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 80px 24px 60px;
+  background: linear-gradient(180deg, rgba(240,90,40,0.08) 0%, transparent 60%);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(240,90,40,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero h1 {
+  font-size: 3.2em;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--orange) 0%, #FF8C42 50%, var(--auburn) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+}
+.hero .tagline {
+  font-size: 1.25em;
+  color: var(--text-dim);
+  max-width: 640px;
+  margin: 0 auto 28px;
+}
+.badge-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.82em;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+/* TOC */
+.toc {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 24px;
+}
+.toc h2 {
+  font-size: 1.4em;
+  color: var(--orange);
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+.toc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 10px;
+}
+.toc-item {
+  display: block;
+  padding: 12px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 0.92em;
+  transition: all 0.2s;
+}
+.toc-item:hover {
+  background: var(--accent-glow);
+  border-color: var(--orange);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+.toc-item span { color: var(--text-dim); font-size: 0.85em; display: block; margin-top: 2px; font-weight: 400; }
+/* Main Content */
+.content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+section {
+  margin-top: 56px;
+}
+h2 {
+  font-size: 1.8em;
+  font-weight: 800;
+  color: var(--orange);
+  margin-bottom: 8px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border);
+  letter-spacing: -0.5px;
+}
+h3 {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: var(--text);
+  margin: 28px 0 10px;
+}
+h4 {
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--purple);
+  margin: 18px 0 6px;
+}
+p, li { color: var(--text-dim); font-size: 0.95em; }
+ul, ol { padding-left: 24px; margin: 8px 0; }
+li { margin: 5px 0; }
+li strong { color: var(--text); }
+/* Cards */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin: 16px 0;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+  margin: 16px 0;
+}
+.feature-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  transition: all 0.2s;
+}
+.feature-card:hover {
+  border-color: var(--orange);
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+.feature-card .icon {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3em;
+  margin-bottom: 12px;
+}
+.feature-card h4 { color: var(--text); margin: 0 0 6px; }
+.feature-card p { font-size: 0.88em; margin: 0; }
+.tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 0.78em;
+  font-weight: 600;
+  margin: 2px 2px;
+}
+.tag-orange { background: rgba(240,90,40,0.15); color: var(--orange); }
+.tag-blue { background: rgba(96,165,250,0.15); color: var(--blue); }
+.tag-green { background: rgba(74,222,128,0.15); color: var(--green); }
+.tag-purple { background: rgba(167,139,250,0.15); color: var(--purple); }
+.tag-pink { background: rgba(244,114,182,0.15); color: var(--pink); }
+.tag-cyan { background: rgba(34,211,238,0.15); color: var(--cyan); }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0;
+  font-size: 0.9em;
+}
+th {
+  text-align: left;
+  padding: 10px 14px;
+  background: var(--card);
+  color: var(--orange);
+  font-weight: 600;
+  border-bottom: 2px solid var(--border);
+}
+td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-dim);
+}
+tr:hover td { background: rgba(240,90,40,0.03); }
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: 32px 0;
+}
+@media (max-width: 640px) {
+  .hero h1 { font-size: 2em; }
+  .hero .tagline { font-size: 1em; }
+  .card-grid { grid-template-columns: 1fr; }
+  .toc-grid { grid-template-columns: 1fr; }
+}
+</style>
 </head>
 <body>
-
-    <div class="ambient"><div class="blob blob-1"></div><div class="blob blob-2"></div></div>
-
-    <header>
-        <div class="logo">IMAGE TOOLS</div>
-        <div class="v-badge">V1.3 STABLE RELEASE</div>
-    </header>
-
-    <main>
-        <!-- MASTER HERO -->
-        <section class="hero">
-            <div class="hero-tag">Precision Performance. Absolute Sovereignty.</div>
-            <h1>Ecosystem for<span> High-Performance</span></h1>
-            <p>An enterprise-grade Android ecosystem for high-fidelity AI imaging, professional PDF orchestration, and total document encryption. Local-first. Privacy-guaranteed.</p>
-            <div class="btn-stack">
-                <a href="https://github.com/rahilwani8090-cpu/image-tools-/releases/download/imagetools/app-release.apk" class="btn btn-p">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"/></svg>
-                    Download Latest APK
-                </a>
-                <button class="btn btn-outline" onclick="toggleModal(true)">Technical Infrastructure</button>
-            </div>
-        </section>
-
-        <!-- SECURITY: ENCRYPTED VAULT HIGH-VIS -->
-        <section class="vault-core" id="vault">
-            <div class="vault-vis"><div class="vault-shield">🛡️</div><div style="font-size: 14px; color: var(--safe-blue); margin-top:20px; font-weight:800; font-family:'Outfit';">AES-256 RSA SECURE</div></div>
-            <div class="vault-content">
-                <div class="safe-tag">Security Architecture</div>
-                <h2>Encrypted Vault</h2>
-                <p style="color: var(--text-dim); font-size: 20px; margin-bottom: 30px;">Protect your most sensitive assets with **Military-Grade AES-256 Encryption**. Engineered with a Zero-Knowledge model—completely invisible to the system gallery, cache, and unauthorized third-party explorers.</p>
-                <ul class="vault-list">
-                    <li>Stealth Mode Integrity</li>
-                    <li>Biometric 3.0 Unlock</li>
-                    <li>Zero-Leak Sandbox</li>
-                    <li>SQLCipher Core</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- LIVE DEMO SHOWCASE -->
-        <section class="showcase">
-            <h2 style="font-family: 'Outfit'; font-size: clamp(32px, 5vw, 42px); font-weight: 800;">Experience the Core Engines</h2>
-            <div class="demo-grid">
-                <div class="demo-card">
-                    <div class="visual-area"><div class="scan-frame"><div class="scan-line"></div></div></div>
-                    <div class="demo-txt">
-                        <h3>AI ID Scanner</h3>
-                        <p>Real-time edge detection identifies ID boundaries in milliseconds, auto-aligning front and back scans into a print-ready A4 PDF template.</p>
-                    </div>
-                </div>
-                <div class="demo-card">
-                    <div class="visual-area"><div class="split-visual"><div class="split-slider"></div></div></div>
-                    <div class="demo-txt">
-                        <h3>4K AI Super-Resolution</h3>
-                        <p>Proprietary neural networks recreate missing textures to transform low-resolution snapshots into razor-sharp masters instantly.</p>
-                    </div>
-                </div>
-                <div class="demo-card">
-                    <div class="visual-area"><div style="font-size: 65px;">📄</div></div>
-                    <div class="demo-txt">
-                        <h3>Enterprise PDF Suite</h3>
-                        <p>Orchestrate massive document workflows with multi-threaded splitting, merging, and extreme lossless compression logic.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FULL CAPABILITY MATRIX -->
-        <section class="f-grid">
-            <div class="f-item"><span class="f-icon-main">✨</span><h4>AI Content Eraser</h4><p>Generative in-painting for removing text and objects with flawless context-aware background reconstruction.</p></div>
-            <div class="f-item"><span class="f-icon-main">🔍</span><h4>Omni-OCR Scanner</h4><p>Premium text extraction with support for legacy documents, handwriting, and 50+ languages. 100% Offline.</p></div>
-            <div class="f-item"><span class="f-icon-main">🎯</span><h4>Studio BG Remover</h4><p>Neural transparency removal engine. Achieve studio results for design assets and professional cleanups.</p></div>
-            <div class="f-item"><span class="f-icon-main">🛡️</span><h4>Smart Watermarking</h4><p>High-speed batch protection for your visual intellectual property using text or custom brand logos.</p></div>
-            <div class="f-item"><span class="f-icon-main">📏</span><h4>Precision Converter</h4><p>Lossless batch conversion between high-quality WebP, PNG, and JPEG formats with full metadata retention.</p></div>
-            <div class="f-item"><span class="f-icon-main">📦</span><h4>Batch Compression</h4><p>Perceptual compression algorithms that reduce image weight by up to 90% while preserving absolute color accuracy.</p></div>
-        </section>
-
-        <!-- WHY CHOOSE: Strategic Brand Level -->
-        <section class="philosophy">
-            <h2 style="font-family: 'Outfit'; font-size: 40px; font-weight: 800;">Why Trust Image Tools?</h2>
-            <div class="pill-grid">
-                <div class="pill-card">
-                    <h5>Privacy First Logic</h5>
-                    <p>100% of our AI processing resides on your device. Your sensitive data is never uploaded, stored, or analyzed in the cloud.</p>
-                </div>
-                <div class="pill-card">
-                    <h5>Flagship UI/UX</h5>
-                    <p>Rendered with Jetpack Compose 1.7 for ultra-fluid 120Hz animations—an interface that feels alive, premium, and professional.</p>
-                </div>
-                <div class="pill-card">
-                    <h5>Optimized Velocity</h5>
-                    <p>Leveraging optimized C++ kernels and Kotlin Coroutines for processing complex PDF and AI tasks in mere fractions of a second.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- MASTER ARCHITECTURE MODAL -->
-    <div id="m-modal" class="modal">
-        <span class="m-close" onclick="toggleModal(false)">×</span>
-        <div class="m-content">
-            <div class="m-sec">
-                <h2>Technical Infrastructure</h2>
-                <div style="margin-bottom: 30px;">
-                    <span class="tech-tag">Jetpack Compose 1.7</span>
-                    <span class="tech-tag">TensorFlow Lite</span>
-                    <span class="tech-tag">Google ML Kit</span>
-                    <span class="tech-tag">AES-256 Encryption</span>
-                    <span class="tech-tag">SQLCipher Core</span>
-                    <span class="tech-tag">MVVM Clean Architecture</span>
-                    <span class="tech-tag">R8 Optimization</span>
-                </div>
-                <p style="color: var(--text-dim); font-size: 19px; line-height: 1.8;">**Image Tools** operates on a **Local-First Computing** philosophy. By shifting high-load AI synthesis and cryptographic tasks to the device's native hardware, we provide a zero-latency, private experience with zero subscription fees.</p>
-            </div>
-            <div class="m-sec" style="border: none;">
-                <h2>Processing & Security</h2>
-                <p style="color: var(--text-dim); font-size: 17px; line-height: 1.7;">Documents are managed via **SQLCipher Room Persistence** and secured via dynamic **RSA-4096 keys**, ensuring that vaulted files are physically inaccessible. Processing happens in transient memory buffers, never leaking to unprotected storage storage.</p>
-            </div>
-        </div>
+<!-- ==================== HERO ==================== -->
+<header class="hero">
+  <h1>ImageToolsPro</h1>
+  <p class="tagline">A premium all-in-one Android document &amp; image processing suite built with Kotlin, Jetpack Compose, and on-device AI.</p>
+  <div class="badge-row">
+    <span class="badge">📦 <code>com.suhail.imagerstools</code></span>
+    <span class="badge">🔖 v1.7 (versionCode 8)</span>
+    <span class="badge">🎯 SDK 29–36</span>
+    <span class="badge">🧩 Compose + Hilt + Room</span>
+  </div>
+</header>
+<!-- ==================== TABLE OF CONTENTS ==================== -->
+<nav class="toc">
+  <h2>📑 Table of Contents</h2>
+  <div class="toc-grid">
+    <a class="toc-item" href="#overview">1. Project Overview<span>App identity, build config, manifest</span></a>
+    <a class="toc-item" href="#architecture">2. Architecture<span>MVVM, packages, data flow</span></a>
+    <a class="toc-item" href="#features">3. All Features (25+)<span>Every tool and screen in detail</span></a>
+    <a class="toc-item" href="#navigation">4. Navigation Graph<span>70+ routes, deep links, pager</span></a>
+    <a class="toc-item" href="#data">5. Data Layer<span>Room DB, DAOs, DataStore, models</span></a>
+    <a class="toc-item" href="#domain">6. Domain Layer<span>Use cases, repositories</span></a>
+    <a class="toc-item" href="#ui">7. UI Layer<span>Theme, common components, screens</span></a>
+    <a class="toc-item" href="#utilities">8. Utilities (42 files)<span>PDF, AI, compression, vault, ads</span></a>
+    <a class="toc-item" href="#settings">9. Settings &amp; Preferences<span>30+ configurable options</span></a>
+    <a class="toc-item" href="#security">10. Security<span>Biometric lock, vault, encryption</span></a>
+    <a class="toc-item" href="#workers">11. Workers &amp; Background<span>PDF actions, recycle bin cleanup</span></a>
+    <a class="toc-item" href="#deps">12. Dependencies &amp; Tech Stack<span>ML Kit, MediaPipe, CameraX, etc.</span></a>
+  </div>
+</nav>
+<!-- ==================== MAIN CONTENT ==================== -->
+<main class="content">
+<!-- ===== 1. OVERVIEW ===== -->
+<section id="overview">
+  <h2>1. Project Overview</h2>
+  <div class="card">
+    <table>
+      <tr><td><strong>Application ID</strong></td><td><code>com.suhail.imagerstools</code></td></tr>
+      <tr><td><strong>Min SDK</strong></td><td>29 (Android 10)</td></tr>
+      <tr><td><strong>Target / Compile SDK</strong></td><td>36</td></tr>
+      <tr><td><strong>Version</strong></td><td>1.7 (versionCode 8)</td></tr>
+      <tr><td><strong>Language</strong></td><td>Kotlin (JVM 17)</td></tr>
+      <tr><td><strong>UI Framework</strong></td><td>Jetpack Compose + Material 3</td></tr>
+      <tr><td><strong>DI</strong></td><td>Hilt (KSP)</td></tr>
+      <tr><td><strong>Build System</strong></td><td>AGP 9.0.0, Gradle KTS</td></tr>
+      <tr><td><strong>ABI Support</strong></td><td>armeabi-v7a, arm64-v8a, x86, x86_64</td></tr>
+      <tr><td><strong>AdMob App ID</strong></td><td><code>ca-app-pub-3159533515394643~4607828687</code></td></tr>
+      <tr><td><strong>Deep Link Host</strong></td><td><code>rahilwani8090-cpu.github.io</code></td></tr>
+    </table>
+  </div>
+  <h3>Supported MIME Types (Intent Filters)</h3>
+  <p>The app registers as a handler for: <code>application/pdf</code>, <code>image/*</code>, <code>text/plain</code>, all MS Word/Excel/PowerPoint formats, and can receive via <code>ACTION_VIEW</code> and <code>ACTION_SEND</code>.</p>
+  <h3>Permissions</h3>
+  <ul>
+    <li><strong>CAMERA</strong> — Smart Scan, ID Card Scanner, Signature</li>
+    <li><strong>INTERNET</strong> — Ads, links</li>
+    <li><strong>USE_BIOMETRIC</strong> — App lock &amp; vault</li>
+    <li><strong>FOREGROUND_SERVICE / DATA_SYNC</strong> — WorkManager PDF actions</li>
+    <li><strong>POST_NOTIFICATIONS</strong> — Progress notifications (Android 13+)</li>
+    <li><strong>READ_MEDIA_IMAGES / READ_EXTERNAL_STORAGE / WRITE_EXTERNAL_STORAGE</strong> — File access (version-adaptive)</li>
+    <li><strong>ACCESS_MEDIA_LOCATION</strong> — Image metadata</li>
+    <li><strong>BLUETOOTH_*</strong> — Printing support</li>
+  </ul>
+</section>
+<!-- ===== 2. ARCHITECTURE ===== -->
+<section id="architecture">
+  <h2>2. Architecture</h2>
+  <div class="card">
+    <p>The app follows <strong>MVVM + Clean Architecture</strong> with clearly separated layers:</p>
+    <pre>
+com.suhail.imagerstools/
+├── ImageToolsApp.kt          # Application class (Hilt, Coil, WorkManager, AdMob, crash handler)
+├── MainActivity.kt           # Single Activity (edge-to-edge, biometric overlay, intent handling)
+├── MainViewModel.kt          # Theme, auth, settings state
+├── data/                     # Data layer
+│   ├── dao/                  # Room DAOs
+│   ├── di/                   # Data-level DI modules
+│   ├── local/                # Room DB, DataStore, preferences
+│   ├── model/                # Entities & data classes (11 files)
+│   ├── repositories/         # Repository implementations
+│   └── repository/           # Repository interfaces
+├── di/                       # App-level Hilt module
+│   └── AppModule.kt
+├── domain/                   # Domain layer
+│   ├── model/                # Domain models
+│   ├── models/               # Additional domain models
+│   ├── repositories/         # Repository interfaces
+│   ├── repository/           # Repository contracts
+│   ├── usecase/              # Use cases (11 files)
+│   └── usecases/             # Additional use cases
+├── navigation/               # Navigation
+│   ├── NavGraph.kt           # Full nav graph (1379 lines, 70+ routes)
+│   └── Screen.kt             # Sealed class with all routes (228 lines)
+├── ui/                       # Presentation layer
+│   ├── common/               # 36 shared composables
+│   ├── components/           # Biometric lock screen
+│   ├── screen/               # 25 feature packages + MainScreen
+│   └── theme/                # Color, Theme, Typography
+├── util/                     # 42 utility files
+└── workers/                  # Background workers
+    ├── PdfActionWorker.kt    # Massive PDF operations worker (63KB)
+    └── RecycleBinCleanupWorker.kt
+    </pre>
+  </div>
+</section>
+<!-- ===== 3. FEATURES ===== -->
+<section id="features">
+  <h2>3. All Features</h2>
+  <p>The app has <strong>4 main tabs</strong> (Home, PDF, Compress, Remove BG) implemented as a <code>HorizontalPager</code>, plus <strong>25+ feature modules</strong>.</p>
+  <h3>3.1 Main Tabs</h3>
+  <div class="card-grid">
+    <div class="feature-card">
+      <div class="icon" style="background:rgba(240,90,40,0.15);">🏠</div>
+      <h4>Home</h4>
+      <p>System health bar, AI tool cards (Text Eraser, Upscale), quick actions carousel (14 tools), recent files list with sort/filter/search, pull-to-refresh, multi-select with bulk delete/share/vault, file detail bottom sheet, default app prompt.</p>
     </div>
-
-    <footer>
-        <div class="footer-logo">Powered by Image Tools Ecosystem</div>
-        <div style="color: var(--text-dim); font-size: 14px; margin-top: 20px;">© 2026 Image Tools Laboratory. Engineered for Professionals.</div>
-    </footer>
-
-    <script>
-        function toggleModal(show) {
-            document.getElementById('m-modal').style.display = show ? 'block' : 'none';
-            document.body.style.overflow = show ? 'hidden' : 'auto';
-        }
-    </script>
+    <div class="feature-card">
+      <div class="icon" style="background:rgba(96,165,250,0.15);">📄</div>
+      <h4>PDF Manager</h4>
+      <p>Full PDF file browser with create, import, sort, filter, search. Quick actions for all PDF tools. Banner ads integration.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon" style="background:rgba(74,222,128,0.15);">📦</div>
+      <h4>Compress</h4>
+      <p>Image compression hub with file listing, compress actions, format conversion shortcuts. Supports batch operations.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon" style="background:rgba(244,114,182,0.15);">✂️</div>
+      <h4>Remove Background</h4>
+      <p>AI-powered background removal using MediaPipe &amp; ML Kit Subject Segmentation. Gradient/custom background replacement. Preview &amp; export.</p>
+    </div>
+  </div>
+  <h3>3.2 All Feature Modules</h3>
+  <div class="card-grid">
+    <div class="feature-card">
+      <div class="icon" style="background:rgba(34,211,238,0.15);">🔍</div>
+      <h4>OCR (Text Recognition)</h4>
+      <p>Multi-language OCR via ML Kit (English, Chinese, Devanagari, Japanese, Korean) + Tesseract4Android. Image-to-text extraction with copy, share, export as PDF/TXT. 72KB screen, 72KB ViewModel.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon" style="background:rgba(167,139,250,0.15);">🪪</div>
+      <h4>ID Card Scanner</h4>
+      <p>Scan front &amp; back of ID cards. Quick edit bottom sheet. PDF generation from scanned cards. Face detection via ML Kit. 48KB screen.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon" style="background:rgba(240,90,40,0.15);">📷</div>
+      <h4>Smart Scan (Document Scanner)</h4>
+      <p>Camera or gallery source. Edge detection via OpenCV. Auto-crop, perspective correction. Enhancement filters (grayscale, sharpen, contrast). Multi-page scanning. PDF export with settings. 9 files, 67KB ViewModel.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon" style="background:rgba(250,204,21,0.15);">📝</div>
+      <h4>Text to PDF</h4>
+      <p>Full rich-text editor with Markdown support (bold, italic, headers, lists). Live preview. Font size, color, alignment. Page size/orientation/margins. Draft auto-save. Professional PDF output. 76KB screen, 62KB ViewModel.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon" style="background:rgba(74,222,128,0.15);">🔀</div>
+      <h4>PDF Rearranger</h4>
+      <p>Select PDF → reorder pages via drag-and-drop → save. Password-protected PDF support with password prompt. Thumbnail previews.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon" style="background:rgba(96,165,250,0.15);">📐</div>
+      <h4>PDF Compress</h4>
+      <p>3-level compression (Low/Medium/High). Before/after size comparison. Background processing via WorkManager with notifications.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon" style="background:rgba(244,114,182,0.15);">🖼️</div>
+      <h4>PDF to JPG</h4>
+      <p>Select PDF → choose specific pages → convert to JPG images. Quality settings. Batch export.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon" style="background:rgba(167,139,250,0.15);">🔗</div>
+      <h4>Merge PDF</h4>
+      <p>Select multiple PDFs → reorder → merge into single PDF. Professional metadata &amp; resource optimization.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon" style="background:rgba(34,211,238,0.15);">📃</div>
+      <h4>PDF to Word</h4>
+      <p>Convert PDF files to .docx format using Apache POI. Password-protected PDF handling. Text extraction &amp; formatting preservation.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon" style="background:rgba(250,204,21,0.15);">✂️</div>
+      <h4>Split PDF</h4>
+      <p>Split PDF by page ranges or individual pages. Custom range input. Preview before split.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon" style="background:rgba(240,90,40,0.15);">🔄</div>
+      <h4>Image Converter</h4>
+      <p>Convert images between JPG, PNG, WEBP formats. Batch conversion support. Quality settings.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon" style="background:rgba(74,222,128,0.15);">📦</div>
+      <h4>Image Compress</h4>
+      <p>Compression presets (Low/Medium/High). Custom target size. Resolution scaling. Metadata removal. Before/after preview comparison. Format selection. 115KB editor screen with full image editing.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon" style="background:rgba(96,165,250,0.15);">✏️</div>
+      <h4>Image Editor</h4>
+      <p>Full editor with crop (UCrop), rotate, filters (GPUImage), adjustments. Auto-crop mode. Save to gallery. 115KB screen.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon" style="background:rgba(244,114,182,0.15);">🖊️</div>
+      <h4>Add Signature</h4>
+      <p>Draw signature on canvas. Place on PDF or image with drag positioning. Per-page placement for PDFs. Text element overlay. Live preview. 82KB ViewModel, 7 files.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon" style="background:rgba(167,139,250,0.15);">💧</div>
+      <h4>Watermark &amp; Branding</h4>
+      <p>Text/Logo/Combined watermarks. Opacity, font size, rotation, color, position (9 positions). Tiled mode. Password protection. Templates.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon" style="background:rgba(34,211,238,0.15);">🤖</div>
+      <h4>AI Text Eraser</h4>
+      <p>On-device AI to detect &amp; remove text from images while preserving the photo. ML Kit text detection + inpainting engine. PRO branded feature. 19KB engine, 38KB screen.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon" style="background:rgba(250,204,21,0.15);">🔬</div>
+      <h4>Smart AI Upscale</h4>
+      <p>Enhance image quality/resolution using on-device AI processing. Multiple upscale models (Basic to Ultimate tiers). HD+ branded feature. 7 files.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon" style="background:rgba(240,90,40,0.15);">✂️</div>
+      <h4>Remove Background</h4>
+      <p>MediaPipe selfie segmentation + ML Kit subject segmentation. Custom background (solid, gradient, image). Preview with toggle. Export as PNG. 60KB screen, 46KB ViewModel.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon" style="background:rgba(74,222,128,0.15);">🔒</div>
+      <h4>Encrypted Vault</h4>
+      <p>AES encryption. PIN/biometric setup &amp; authentication. Store PDFs &amp; images securely. Decrypt to view. File picker for adding files. 6 files, 68KB home screen.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon" style="background:rgba(96,165,250,0.15);">📖</div>
+      <h4>PDF Viewer</h4>
+      <p>Full-featured viewer with glassmorphism UI. Page thumbnails, bookmarks, page grid navigation. Zoom/pan. Bottom dock with tools. 185KB screen — the largest file in the project.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon" style="background:rgba(244,114,182,0.15);">🔐</div>
+      <h4>PDF Password (Unlock/Set)</h4>
+      <p>Unlock password-protected PDFs. Set new password protection on PDFs. Two separate screens with dedicated ViewModels.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon" style="background:rgba(167,139,250,0.15);">📊</div>
+      <h4>Performance Monitor</h4>
+      <p>Real-time system metrics: CPU, RAM, storage, battery. Health level scoring. iOS/macOS-inspired design. Accessible from home &amp; settings.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon" style="background:rgba(34,211,238,0.15);">📂</div>
+      <h4>Word/Text Viewers</h4>
+      <p>View .docx files (Apache POI rendering). View plain text files. Universal preview screen for all file types.</p>
+    </div>
+  </div>
+</section>
+<!-- ===== 4. NAVIGATION ===== -->
+<section id="navigation">
+  <h2>4. Navigation</h2>
+  <div class="card">
+    <p><strong>70+ routes</strong> defined as a sealed class <code>Screen</code>. Main screen uses <code>HorizontalPager</code> with 4 tabs. NavGraph is 1379 lines.</p>
+    <h4>Route Categories</h4>
+    <table>
+      <tr><th>Category</th><th>Routes</th></tr>
+      <tr><td>Core</td><td>splash, home, settings, monitoring</td></tr>
+      <tr><td>PDF Tools</td><td>pdf_list, pdf_viewer, text_to_pdf, compress_pdf_*, merge_pdf_*, pdf_to_jpg_*, pdf_to_word_*, pdf_split_*, pdf_rearranger_*, unlock_pdf, set_password_pdf</td></tr>
+      <tr><td>Image Tools</td><td>compress, image_compress_*, image_edit, image_edit_success, image_converter_*, image_preview</td></tr>
+      <tr><td>AI Features</td><td>remove_bg*, content_stripper*, smart_upscale*, ocr</td></tr>
+      <tr><td>Scanning</td><td>smart_scan, id_card_scanner, app_camera</td></tr>
+      <tr><td>Signatures</td><td>signature_file_select, signature_create, signature_placement, signature_live, signature_success</td></tr>
+      <tr><td>Watermark</td><td>watermark_create, watermark_apply, watermark_success</td></tr>
+      <tr><td>Vault</td><td>vault, vault_setup, vault_auth, vault_home, vault_file_picker, vault_success</td></tr>
+      <tr><td>Viewers</td><td>word_viewer, text_viewer, universal_preview</td></tr>
+      <tr><td>Management</td><td>recycle_bin, pdf_success, image_select</td></tr>
+    </table>
+  </div>
+</section>
+<!-- ===== 5. DATA LAYER ===== -->
+<section id="data">
+  <h2>5. Data Layer</h2>
+  <h3>Room Database</h3>
+  <div class="card">
+    <p><code>AppDatabase</code> with tables: <code>files</code>, <code>vault_files</code>, <code>text_drafts</code>, <code>scanned_pages</code>, <code>selected_images</code>, <code>recycle_bin</code></p>
+    <h4>DAOs</h4>
+    <ul>
+      <li><strong>FileDao</strong> — CRUD for FileItem entities with indices on path, dateModified, type, isDeleted, isVault, isPinned, sourceFeature</li>
+      <li><strong>VaultDao</strong> — Encrypted vault file management</li>
+      <li><strong>DraftDao</strong> — Text-to-PDF draft persistence</li>
+      <li><strong>ScannedPageDao</strong> — Smart scan page tracking</li>
+      <li><strong>SelectedImageDao</strong> — Image selection state</li>
+    </ul>
+    <h4>Key Models</h4>
+    <ul>
+      <li><strong>FileItem</strong> — id, name, path, size, dateModified, type (PDF/IMAGE/TEXT/WORD/UNKNOWN), thumbnailUrl, pageCount, isCompressed, sourceFeature, isDeleted, isVault, isPinned</li>
+      <li><strong>VaultFile</strong> — id, originalName, encryptedName, size, type, addedDate, originalPath, iv (AES init vector)</li>
+      <li><strong>WatermarkSettings</strong> — text, opacity, fontSize, rotation, position (9 options), color, isTiled, logoUri, password</li>
+      <li><strong>ImageCompressSettings</strong> — preset (LOW/MEDIUM/HIGH), customSizeKb, maxWidth/Height, format (JPG/PNG/WEBP), quality, removeMetadata, password, biometric, highPerformanceMode</li>
+      <li><strong>FileSortOrder</strong> — Sorting options for file lists</li>
+      <li><strong>FileFilter</strong> — Type-based file filtering</li>
+      <li><strong>RecycleBinEntity</strong> — Soft-deleted files with restoration info</li>
+    </ul>
+  </div>
+  <h3>DataStore Preferences</h3>
+  <div class="card">
+    <p><code>AppSettingsPreferences</code> (16KB) — Persists 30+ settings including dark mode, follow device mode, text color, language, PDF quality, image format, page size, orientation, margins, file prefix, haptic, biometric lock, vault state, enterprise branding, system monitor, screen protection, and more.</p>
+  </div>
+</section>
+<!-- ===== 6. DOMAIN LAYER ===== -->
+<section id="domain">
+  <h2>6. Domain Layer</h2>
+  <div class="card">
+    <h4>Use Cases (11 files)</h4>
+    <ul>
+      <li><strong>AddFileUseCase</strong> — Add new files to the database</li>
+      <li><strong>CreatePdfUseCase</strong> — PDF creation orchestration</li>
+      <li><strong>DeleteFileUseCase</strong> — Permanent file deletion</li>
+      <li><strong>GetFileUseCase / GetRecentFilesUseCase</strong> — File retrieval</li>
+      <li><strong>ObserveFileUseCase</strong> — Reactive file observation via Flow</li>
+      <li><strong>UpdateFileUseCase</strong> — File metadata updates</li>
+      <li><strong>MoveFileToRecycleBinUseCase</strong> — Soft delete with recovery</li>
+      <li><strong>MoveFileToVaultUseCase</strong> — Encrypt &amp; move to vault</li>
+      <li><strong>RestoreFileFromRecycleBinUseCase</strong> — Recovery from recycle bin</li>
+      <li><strong>PdfToWordUseCase</strong> — PDF to DOCX conversion (64KB — complex extraction logic)</li>
+    </ul>
+  </div>
+</section>
+<!-- ===== 7. UI LAYER ===== -->
+<section id="ui">
+  <h2>7. UI Layer</h2>
+  <h3>Theme System</h3>
+  <div class="card">
+    <p>Brand colors: <span class="tag tag-orange">UbuntuOrange #F05A28</span> <span class="tag tag-purple">UbuntuAuburn #772953</span> <span class="tag tag-cyan">Background #0F111A</span> <span class="tag tag-blue">Surface #161922</span></p>
+    <p>Features: Dark/Light mode, follow-device mode, custom text color (30+ preset colors), dynamic color disabled for brand consistency, wrapped haptic feedback (global toggle), ultra-smooth animation toggle, composition locals for theme state.</p>
+  </div>
+  <h3>Common Components (36 files)</h3>
+  <div class="card">
+    <ul>
+      <li><strong>AppBars</strong> — MainTopAppBar with animated search</li>
+      <li><strong>Cards</strong> — ActionCard, FileCard, BrandAIToolCard (21KB)</li>
+      <li><strong>SuccessScreenContent</strong> — Branded success with share/open actions (22KB)</li>
+      <li><strong>FileDetailBottomSheet</strong> — Full file actions: rename, share, delete, compress, convert, vault, signature, watermark (51KB)</li>
+      <li><strong>ImageEditor</strong> — Crop components with UCrop integration (23KB crop, 17KB editor)</li>
+      <li><strong>CommonPdfSettingsBottomSheet</strong> — PDF export settings (36KB)</li>
+      <li><strong>MultiFileSuccessContent</strong> — Batch operation results (20KB)</li>
+      <li><strong>PdfCompressionLevelBottomSheet</strong> — 3-level compression selector (13KB)</li>
+      <li><strong>Other</strong> — BannerAd, InterstitialAdTemplate, ImageSourceBottomSheet, SortBottomSheet, SearchBar, LoadingDialog, PasswordDialog, SwipeableItem, DragDropHint, EmptyState, BrandEmptyState, ErrorComponents, FeatureLoadingScreen, LazyColumnScrollbar, DefaultAppBottomSheet, PdfCreateBottomSheet, EnterpriseBrandingOverlay</li>
+    </ul>
+  </div>
+</section>
+<!-- ===== 8. UTILITIES ===== -->
+<section id="utilities">
+  <h2>8. Utilities (42 Files)</h2>
+  <div class="card">
+    <table>
+      <tr><th>File</th><th>Size</th><th>Purpose</th></tr>
+      <tr><td>PdfGenerator.kt</td><td>46KB</td><td>Professional PDF creation with page sizes, margins, images, text, metadata, resource optimization</td></tr>
+      <tr><td>SmartScanner.kt</td><td>47KB</td><td>OpenCV document detection, edge detection, perspective transform, image enhancement filters</td></tr>
+      <tr><td>FileUtils.kt</td><td>31KB</td><td>File I/O, sharing, thumbnails, MIME types, gallery saving, cache management</td></tr>
+      <tr><td>SystemMonitor.kt</td><td>25KB</td><td>CPU, RAM, storage, battery monitoring with health scoring</td></tr>
+      <tr><td>PdfCompressor.kt</td><td>26KB</td><td>3-level PDF compression engine with image downsampling</td></tr>
+      <tr><td>PdfMerger.kt</td><td>24KB</td><td>Professional PDF merging with metadata &amp; resource optimization</td></tr>
+      <tr><td>BitmapHelper.kt</td><td>23KB</td><td>Bitmap loading, scaling, rotation, format conversion, memory management</td></tr>
+      <tr><td>WatermarkManager.kt</td><td>21KB</td><td>Text/logo watermark application with tiling, positioning, opacity</td></tr>
+      <tr><td>PdfBrandingUtils.kt</td><td>20KB</td><td>Enterprise branding for PDF outputs</td></tr>
+      <tr><td>PdfSplitter.kt</td><td>18KB</td><td>PDF page splitting by ranges</td></tr>
+      <tr><td>AdMobFlowDiagram.kt</td><td>13KB</td><td>Ad integration documentation &amp; flow</td></tr>
+      <tr><td>ImageCompressor.kt</td><td>9KB</td><td>JPEG/PNG/WEBP image compression with quality control</td></tr>
+      <tr><td>ErrorHandler.kt</td><td>9KB</td><td>Global error handling with crash prevention</td></tr>
+      <tr><td>VaultManager.kt</td><td>9KB</td><td>AES-256 encryption/decryption for vault files</td></tr>
+      <tr><td>PdfDecoder.kt</td><td>9KB</td><td>PDF page rendering to bitmap using PdfiumAndroid</td></tr>
+      <tr><td>TesseractHelper.kt</td><td>8KB</td><td>Tesseract OCR engine integration</td></tr>
+      <tr><td>PerformanceMonitor.kt</td><td>7KB</td><td>App performance tracking &amp; metrics</td></tr>
+      <tr><td>ResourceManager.kt</td><td>7KB</td><td>Memory &amp; resource lifecycle management</td></tr>
+      <tr><td>FluidMotion.kt</td><td>7KB</td><td>Smooth animation utilities</td></tr>
+      <tr><td>AppLogger.kt</td><td>7KB</td><td>Structured logging system</td></tr>
+      <tr><td>InterstitialAdManager.kt</td><td>5KB</td><td>AdMob interstitial ad lifecycle</td></tr>
+      <tr><td>PdfToWordConverter.kt</td><td>5KB</td><td>PDF text extraction to DOCX</td></tr>
+      <tr><td>ConcurrencyManager.kt</td><td>5KB</td><td>Coroutine scope &amp; thread management</td></tr>
+      <tr><td>PdfThumbnailHelper.kt</td><td>4KB</td><td>PDF page thumbnail generation</td></tr>
+      <tr><td>TimeoutManager.kt</td><td>4KB</td><td>Operation timeout handling</td></tr>
+      <tr><td>WordThumbnailFetcher.kt</td><td>4KB</td><td>.docx file thumbnail generation</td></tr>
+      <tr><td>BiometricAppLockManager.kt</td><td>3KB</td><td>Biometric prompt configuration</td></tr>
+      <tr><td>CrashMonitor.kt</td><td>3KB</td><td>Crash detection &amp; reporting</td></tr>
+      <tr><td>CrashPreventionManager.kt</td><td>2KB</td><td>Pre-emptive crash prevention</td></tr>
+      <tr><td>HapticUtils.kt</td><td>2KB</td><td>Haptic feedback helpers with settings-aware toggle</td></tr>
+      <tr><td>PageSizeUtils.kt</td><td>2KB</td><td>PDF page size calculations (A3-A5, Letter, Legal)</td></tr>
+      <tr><td>AdMobConstants.kt</td><td>2KB</td><td>Ad unit IDs and configuration</td></tr>
+      <tr><td>UriUtils.kt</td><td>2KB</td><td>URI encoding/decoding helpers</td></tr>
+      <tr><td>DataResetManager.kt</td><td>1.6KB</td><td>Factory reset functionality</td></tr>
+      <tr><td>LockHelper.kt</td><td>1KB</td><td>Skip-auth flag for system picker intents</td></tr>
+      <tr><td>Others</td><td>—</td><td>OperationQueue, FilterType, UiEvent, UiText, ContextUtils, UriSaver</td></tr>
+    </table>
+  </div>
+</section>
+<!-- ===== 9. SETTINGS ===== -->
+<section id="settings">
+  <h2>9. Settings &amp; Preferences</h2>
+  <div class="card">
+    <h4>General</h4>
+    <ul><li>Language selector</li><li>Show file extensions toggle</li><li>OCR language selection</li></ul>
+    <h4>Appearance &amp; Theme</h4>
+    <ul><li>Follow device dark/light mode</li><li>Manual dark mode toggle</li><li>Custom text color (30+ presets)</li></ul>
+    <h4>Engine &amp; AI Intelligence</h4>
+    <ul><li>Smart AI Upscaling toggle</li><li>High-resolution output</li><li>Ultra-smooth animations</li><li>High performance mode</li></ul>
+    <h4>PDF &amp; Conversion Defaults</h4>
+    <ul><li>PDF quality (Low/Medium/High)</li><li>Image format (JPG/PNG/WEBP)</li><li>Page size (A3/A4/A5/Letter/Legal)</li><li>Orientation (Portrait/Landscape/Auto)</li><li>Margins</li><li>File name prefix</li></ul>
+    <h4>Privacy &amp; Security</h4>
+    <ul><li>Biometric app lock</li><li>Screen protection (FLAG_SECURE)</li><li>Asset brand protection</li><li>Encrypted vault</li><li>Recycle bin with configurable retention (7–90 days)</li><li>Auto export cleanup</li></ul>
+    <h4>Custom Branding &amp; Enterprise</h4>
+    <ul><li>Enterprise branding overlay toggle</li><li>Business name customization</li></ul>
+    <h4>Maintenance &amp; Diagnostics</h4>
+    <ul><li>Auto-optimize storage</li><li>Auto-save to gallery</li><li>Haptic feedback toggle</li><li>System monitor toggle</li><li>Performance optimization (manual cache clear)</li></ul>
+    <h4>About</h4>
+    <ul><li>Share app</li><li>Privacy policy (built-in)</li><li>Version info</li></ul>
+  </div>
+</section>
+<!-- ===== 10. SECURITY ===== -->
+<section id="security">
+  <h2>10. Security</h2>
+  <div class="card">
+    <ul>
+      <li><strong>Biometric App Lock</strong> — Full-screen lock overlay on cold start, screen off, and user leave. Uses AndroidX Biometric with fallback handling. Smart skip for system picker intents (camera, file picker).</li>
+      <li><strong>Encrypted Vault</strong> — AES-256 encryption with per-file IV. PIN-based access with biometric option. Files encrypted on disk, decrypted on-the-fly for viewing.</li>
+      <li><strong>Screen Protection</strong> — FLAG_SECURE prevents screenshots when enabled or when auth is pending.</li>
+      <li><strong>PDF Password</strong> — Set/remove passwords on PDFs. Password prompt for protected PDFs across all tools.</li>
+      <li><strong>Asset Brand Protection</strong> — Prevents metadata tampering on generated documents.</li>
+    </ul>
+  </div>
+</section>
+<!-- ===== 11. WORKERS ===== -->
+<section id="workers">
+  <h2>11. Workers &amp; Background Processing</h2>
+  <div class="card">
+    <ul>
+      <li><strong>PdfActionWorker</strong> (63KB) — Massive foreground worker handling: PDF compression, merging, splitting, image-to-PDF, watermark application, signature placement, text-to-PDF generation, PDF-to-JPG conversion, PDF-to-Word conversion. Shows progress notifications with Android 14+ foreground service type <code>dataSync</code>.</li>
+      <li><strong>RecycleBinCleanupWorker</strong> (2KB) — Periodic cleanup of expired recycle bin items based on retention settings. Scheduled via WorkManager on app startup.</li>
+    </ul>
+  </div>
+</section>
+<!-- ===== 12. DEPENDENCIES ===== -->
+<section id="deps">
+  <h2>12. Dependencies &amp; Tech Stack</h2>
+  <div class="card">
+    <table>
+      <tr><th>Category</th><th>Libraries</th></tr>
+      <tr><td>UI Framework</td><td>Jetpack Compose (BOM), Material 3, Material Icons Extended, Compose Animation, Foundation, Navigation Compose</td></tr>
+      <tr><td>Architecture</td><td>Hilt (DI), Room (DB), DataStore (Preferences), Lifecycle ViewModel, WorkManager, Coroutines</td></tr>
+      <tr><td>AI / ML</td><td>ML Kit Text Recognition (5 scripts), ML Kit Document Scanner, ML Kit Subject Segmentation, ML Kit Face Detection, MediaPipe Vision (selfie segmentation), TensorFlow Lite</td></tr>
+      <tr><td>PDF</td><td>PdfBox-Android, AndroidPdfViewer, PdfiumAndroid (mhiew fork)</td></tr>
+      <tr><td>Image</td><td>Coil (async loading), GPUImage (filters), UCrop (cropping), OpenCV (edge detection)</td></tr>
+      <tr><td>Document</td><td>Apache POI + POI-OOXML (Word/Excel/PowerPoint)</td></tr>
+      <tr><td>OCR</td><td>Tesseract4Android v4.7.0</td></tr>
+      <tr><td>Camera</td><td>CameraX (core, camera2, lifecycle, view)</td></tr>
+      <tr><td>Animation</td><td>Lottie Compose</td></tr>
+      <tr><td>Ads</td><td>Google Play Services Ads 23.6.0</td></tr>
+      <tr><td>Security</td><td>AndroidX Biometric</td></tr>
+      <tr><td>Serialization</td><td>Gson</td></tr>
+      <tr><td>Compression</td><td>Zelory Compressor</td></tr>
+      <tr><td>Performance</td><td>ProfileInstaller</td></tr>
+    </table>
+  </div>
+</section>
+<div class="divider"></div>
+<footer style="text-align:center; padding: 40px 24px; color: var(--text-dim);">
+  <p style="font-size:0.9em;">ImageToolsPro — Complete Project Documentation</p>
+  <p style="font-size:0.8em; margin-top:6px;">Generated on February 18, 2026 · <code>com.suhail.imagerstools</code> v1.7</p>
+</footer>
+</main>
 </body>
 </html>
